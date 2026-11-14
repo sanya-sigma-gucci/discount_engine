@@ -4,19 +4,19 @@
 
 ## Структура
 discount_engine/
-money.py # Decimal + банковское округление (half-to-even)
-models.py # Product, CartItem, Customer, Order, AppliedDiscount, PricingResult
-context.py # DiscountContext — единственный мутируемый объект расчёта
+money.py банковское округление
+models.py Product, CartItem, Customer, Order, AppliedDiscount, PricingResult
+context.py DiscountContext
 discounts/
-base.py # Абстракция Discount + enum Stage
-percent.py # Процентная скидка
-fixed.py # Фиксированная скидка
+base.py Абстракция Discount + enum Stage
+percent.py Процентная скидка
+fixed.py Фиксированная скидка
 three_for_two.py # 3 по цене 2
 loyalty.py # Лояльность 5% / 30 дней
 first_order.py # Первый заказ 10%
 free_delivery.py # Бесплатная доставка
 promo_code.py # Промокод (процент или фикс)
-factory.py # DiscountFactory + DiscountRegistry (Singleton)
+factory.py # DiscountFactory + DiscountRegistry
 engine.py # PricingEngine — оркестратор
 tests/ # pytest
 demo.py # демо
